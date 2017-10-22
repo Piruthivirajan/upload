@@ -16,7 +16,7 @@ getDetails(){
     return this.http.post("https://addresspring.herokuapp.com/addressbook",info).map(res => res.json());
   }
   removeAddress(info){
-    return this.http.delete("https://addresspring.herokuapp.com/addressbook/"+info).map(res => res.json());
+    return this.http.delete("https://addresspring.herokuapp.com/addressbook/"+info);
   }
 
 }
