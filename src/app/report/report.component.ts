@@ -27,17 +27,12 @@ getDetails(){
 editAddress(value:any){
 alert("Record Edited");
 }
-deleteAddress(value:any){
-  this.addressService.removeAddress(value) .subscribe(reg =>{  
+deleteAddress(id){
+  this.addressService.removeAddress(id).subscribe(reg =>{  
     debugger;    
+    this.getDetails();
+    this.addressList=new Address();
+     alert("Record Deleted Successfully");
   });
-
-  //this.router.navigateByUrl('/add');
-  this.addressList=new Address();
-  this.getDetails();
-  this.router.navigateByUrl('/report');
-  alert("Record Deleted Refresh the Page");
 }
 }
-
-``
