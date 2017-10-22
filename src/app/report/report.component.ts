@@ -28,7 +28,7 @@ editAddress(value:any){
 alert("Record Edited");
 }
 deleteAddress(id){
-  this.addressService.removeAddress(id).subscribe(reg =>{  
+  this.addressService.removeAddress(id).subscribe(() =>{  
     debugger;    
     this.getDetails();
     this.addressList=new Address();
